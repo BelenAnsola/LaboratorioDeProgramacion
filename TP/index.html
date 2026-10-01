@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras - Estática</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="view-container">
+
+        <div class="tabs">
+            <!-- Compras es un botón activo porque estamos en esta página -->
+            <button class="tab active">Compras</button>
+            <!-- Alacena enlaza a alacena.html -->
+            <a href="alacena.html" class="tab inactive" style="text-decoration: none; text-align: center;">Alacena</a>
+        </div>
+
+        <div class="list-container">
+            <!-- Datos estaticos de compras (sin JSON por ahora para simplificar) -->
+            <div class="notebook-line">
+                <span class="item-name">Servilletas</span>
+                <div class="item-actions">
+                    <button class="btn-delete" title="Eliminar">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="notebook-line">
+                <span class="item-name">Huevos</span>
+                <div class="item-actions">
+                    <button class="btn-delete" title="Eliminar">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>                </div>
+            </div>
+            <div class="notebook-line">
+                <span class="item-name">Leche</span>
+                <div class="item-actions">
+                    <span>1</span>
+                    <button class="btn-delete" title="Eliminar">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>                
+                </div>
+            </div>
+            <div class="notebook-line"></div>
+            <div class="notebook-line"></div>
+            <div class="notebook-line"></div>
+            <div class="notebook-line"></div>
+            <div class="notebook-line"></div>
+        </div>
+
+        <div class="bottom-bar">
+            <!-- Boton que podría llevar a un modal o a otra pagina -->
+            <button class="btn-main">
+                <span>Nuevo Producto</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Latas de Atún",
+        "cantidad": 2,
+        "unidad": "g",
+        "tamanio": 300
+    },
+    {
+        "nombre": "Harina",
+        "cantidad": 1,
+        "unidad": "kg",
+        "tamanio": 1
+    },
+    {
+        "nombre": "Shampoo",
+        "cantidad": 1,
+        "unidad": "ml",
+        "tamanio": 400
+    },
+    {
+        "nombre": "Acondicionador",
+        "cantidad": 1,
+        "unidad": "ml",
+        "tamanio": 400
+    }
+]

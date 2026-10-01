@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+            
+            <!-- Vista de Edicion -->
+    <div class="view-container edit-view">
+        
+        <h2 class="edit-title">Imagen Producto</h2>
+        
+        <div class="img-box">
+            <button class="arrow-btn left">❮</button>
+            <img src="https://placehold.co/150x150/ffffff/000000?text=Pantene" alt="Producto">
+            <button class="arrow-btn right">❯</button>
+        </div>
+
+        <div class="img-controls">
+            <button class="btn-add-img">
+                Nueva Imagen <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+        <div class="form-group">
+            <label>Producto</label>
+            <input type="text" class="input-white" value="Shampoo">
+        </div>
+
+        <div class="form-group">
+            <label>Tamaño paquete</label>
+            <input type="number" class="input-white" value="400">
+        </div>
+
+        <div class="form-group">
+            <label>Unidad de Medida</label>
+            <div class="unit-select-wrap">
+                <select class="select-unit">
+                    <option value="unidad" selected>unidad</option>
+                    <option value="ml">ml</option>
+                    <option value="l">l</option>
+                    <option value="g">g</option>
+                    <option value="kg">kg</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Cantidad</label>
+            <input type="number" class="input-white" value="1">
+        </div>
+
+
+    </div>
+        <div class="edit-actions">
+            <button class="btn-delete" title="Eliminar">
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+            <div class="action-buttons">
+                <!-- El boton cancelar nos lleva de vuelta a la alacena -->
+                <a href="alacena.html" class="btn-3d-red" style="text-decoration:none; display:inline-block;">Cancelar</a>
+                <a href="alacena.html" class="btn-3d-green" style="text-decoration:none; display:inline-block;">Guardar</a>
+            </div>
+        </div>
+</body>
+</html>
