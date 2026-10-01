@@ -3,81 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alacena - Leyendo Archivo</title>
+    <title>Alacena - Estática</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     <div class="view-container">
-        
+
         <div class="tabs">
-            <!-- index es el enlace que nos regresa a compras -->
+            <!-- Index es el enlace que nos regresa a compras -->
             <a href="index.html" class="tab inactive" style="text-decoration: none; text-align: center;">Compras</a>
-            
-            <!-- Alacena es el botón activo porque estamos en esta página -->
+            <!-- Alacena es un boton activo porque estamos en esta pagina -->
             <button class="tab active">Alacena</button>
         </div>
 
-        <!-- Contenedor vacío: JavaScript pondrá los datos aquí -->
-        <div class="list-container" id="lista-alacena">
-            <!-- Los datos aparecerán mágicamente aquí -->
+
+        <div class="list-container">
+            <!-- Datos estaticos de compras (sin JSON por ahora para simplificar) -->
+            <div class="notebook-line">
+                <span class="item-name">Latas de Atún</span>
+                <div class="item-actions">
+                    <span>2</span>
+                    <a href="editar.html" class="btn-editar" title="Editar">
+                        <i class="fa-solid fa-pencil"></i>                                
+                    </a>
+                    <button class="btn-eliminar" title="Eliminar">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="notebook-line">
+                <span class="item-name">Harina</span>
+                <div class="item-actions">
+                    <span>1</span>
+                    <a href="editar.html" class="btn-editar" title="Editar">
+                        <i class="fa-solid fa-pencil"></i>                                
+                    </a>
+                    <button class="btn-eliminar" title="Eliminar">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>             
+                </div>
+            </div>
+            <div class="notebook-line">
+                <span class="item-name">Shampoo</span>
+                <div class="item-actions">
+                    <span>1</span>
+                    <a href="editar.html" class="btn-editar" title="Editar">
+                        <i class="fa-solid fa-pencil"></i>                                
+                    </a>
+                    <button class="btn-eliminar" title="Eliminar">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>               
+                </div>
+            </div>
+            <div class="notebook-line">
+                <span class="item-name">Acondicionador</span>
+                <div class="item-actions">
+                    <span>1</span>
+                    <a href="editar.html" class="btn-editar" title="Editar">
+                        <i class="fa-solid fa-pencil"></i>                                
+                    </a>
+                    <button class="btn-eliminar" title="Eliminar">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>               
+                </div>
+            </div>
+            <div class="notebook-line"></div>
+            <div class="notebook-line"></div>
+            <div class="notebook-line"></div>
+            <div class="notebook-line"></div>
         </div>
 
-        <div class="bottom-bar">
-            <button class="btn-main">
+
+        <div class="barra-inferior">
+            <button class="btn-inferior">
                 <span>Nuevo Producto</span>
                 <i class="fa-solid fa-plus"></i>
             </button>
         </div>
     </div>
-
-    <!-- Script para leer el archivo JSON -->
-    <script>
-        // 1. Buscamos el contenedor donde vamos a poner los datos
-        const contenedorLista = document.getElementById('lista-alacena');
-
-        // 2. Usamos fetch para leer el archivo datos.json
-        fetch('datos_alacena.json')
-            .then(respuesta => respuesta.json()) // Convertimos la respuesta a un formato que podamos usar
-            .then(productos => {
-                
-                // 3. Por cada producto en el archivo, creamos un renglón HTML
-                productos.forEach(producto => {
-                    
-                    // Creamos el renglón con la información del archivo
-                    const renglonHTML = `
-                        <div class="notebook-line">
-                            <span class="item-name">${producto.nombre}</span>
-                            <div class="item-actions">
-                                <span>${producto.cantidad}</span>
-
-                                <a href="editar.html" class="btn-editar" title="Editar">
-                                    <i class="fa-solid fa-pencil"></i>                                
-                                </a>
-                                <button class="btn-delete" title="Eliminar">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                </button>
-
-                            </div>
-                        </div>
-                    `;
-                    
-                    // Lo agregamos al contenedor
-                    contenedorLista.innerHTML += renglonHTML;
-                });
-
-                // 4. Rellenamos con líneas vacías para que quede el diseño de cuaderno
-                const lineasVacias = 8 - productos.length;
-                for (let i = 0; i < lineasVacias; i++) {
-                    contenedorLista.innerHTML += `<div class="notebook-line"></div>`;
-                }
-            })
-            .catch(error => {
-                console.error("Error al leer el archivo:", error);
-                contenedorLista.innerHTML = "<p style='padding: 20px;'>Error al cargar los datos.</p>";
-            });
-    </script>
-
 </body>
 </html>
